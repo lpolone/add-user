@@ -4,7 +4,7 @@ echo " "
 echo "***** Add users *****"
 echo " "
 
-for user in $(cat /juridpe/scripts/users); do
+for user in $(cat /opt/scripts/users); do
     set -e
     echo "[TASK $((++count))] Adding ${user} user"
     useradd ${user}
