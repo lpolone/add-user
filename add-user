@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo " "
+echo "***** Add users *****"
+echo " "
+
+for user in $(cat /juridpe/scripts/users); do
+    set -e
+    echo "[TASK $((++count))] Adding ${user} user"
+    useradd ${user}
+    echo "user ${user} added!"
+    echo " "
+done
